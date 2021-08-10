@@ -1,0 +1,113 @@
+//-------botones-------
+.btn {
+    display: inline-block;
+    border: 1px solid transparent;
+    padding: 1em 1.6em;
+    border-radius: .4em;
+    
+
+    &--sm {
+        padding: .7em 1em;
+    }
+
+    &--pri {
+        background-color: $color-acento--400;
+        color:$color-txt--blanco;
+
+    }
+    &--txt {
+        text-decoration: underline;
+    }
+}
+//cards 
+.card {
+    display: flex;
+    flex-direction: column;
+    border: blueviolet solid 2px;
+
+    &__img {
+        min-height: 200px;
+        background-color: green;
+
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        h4 {
+
+        }
+        .city {
+            font-size: .8em;
+            font-weight: 400;
+
+        }
+        .date {
+        
+        }
+
+    }
+    &__contact {
+        display: flex;
+        flex-direction: column;
+
+    }
+    &__footer {
+                display: flex;
+                justify-content: center;
+
+    }
+
+
+}
+
+.primary {
+    display: grid;
+    grid-template-columns: minmax(150px, 50%) 1fr;
+
+    
+
+
+    &__title {
+        font-weight: 500;
+        font-size: 1.5rem;
+        font-family: 'Roboto', sans-serif;
+        line-height: 2rem;
+
+        
+    }
+    &__txt{
+        font-weight: 500;
+        font-size: 1rem;
+        font-family: 'Roboto', sans-serif;
+        line-height: 1.5rem;
+        text-align: left;
+
+
+    }
+    &__img{
+
+    }
+
+
+}
+
+article{
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+
+    @include propiedadesArticle (70vh, 80vh)
+
+  }
+
+  form {
+
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-flow: column nowrap;
+  max-width: 450px;
+  margin: 0 auto;
+}
+

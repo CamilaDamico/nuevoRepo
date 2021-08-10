@@ -1,0 +1,12 @@
+.gallery {}
+.banner {
+    border: 2px solid green;
+    min-height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    padding: 2em;
+
+}

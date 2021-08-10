@@ -1,0 +1,35 @@
+html,
+html>* {
+    font-family: "Roboto", sans-serif;
+
+}
+
+.span--block {
+    display: block;
+}
+
+.card {
+
+    &__header {
+        font-size: 1.4rem;
+        color: $color-txt--negro;
+        font-weight: 400;
+        font-style: normal;
+        padding: 1.5rem;
+        padding-bottom: 1rem;
+        text-align: center;
+
+
+    }
+
+    &__contact {
+        font-size: 1rem;
+        font-style: normal;
+        padding-left: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    &__footer {
+        padding-bottom: 1rem;
+    }
+}

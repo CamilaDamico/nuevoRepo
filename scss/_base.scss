@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color:inherit;
+    text-decoration: none;
+    list-style: none;
+    font-style: normal;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.img__bg {
+    object-fit: cover;
+}
+
+// ------------ variables ---------------
+
+$color-bg--rosa:hsl(348, 66%, 77%);
+$color-bg--blanco: #fcfcfc;
+$color-heading: #9e3270;
+$color-txt--negro: #1d1d1d;
+$color-txt--blanco: #fff;
+$color-acento--200:#a74a78;
+$color-acento--400:#86365e;
+$color-acento--800:#6c2649;
+
+// ----------- mixin -----------
+@mixin propiedadesArticle ($widht, $height){
+    width: $widht;
+    height: $height;
+}
