@@ -2,7 +2,7 @@
 .btn {
     display: inline-block;
     border: 1px solid transparent;
-    padding: 1em 1.6em;
+    padding: .4em .4em;
     border-radius: .4em;
     
 
@@ -13,28 +13,52 @@
     &--pri {
         background-color: $color-acento--400;
         color:$color-txt--blanco;
+    
 
     }
     &--txt {
         text-decoration: underline;
     }
+
+}
+
+h1{
+    text-align: center;
+    margin: 1rem;
 }
 //cards 
+.results{
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
 .card {
     display: flex;
     flex-direction: column;
-    border: blueviolet solid 2px;
+    border: $color-acento--400 solid 2px;
 
     &__img {
         min-height: 200px;
-        background-color: green;
+        max-height: 224px;
+        overflow: hidden;
+    
+        img{
+            transform:scale(1);
+            transition: all 0.5s ease-out;
+        }
 
+        &:hover{
+            img{
+                transform:scale(1.2);
+            }
+        }
     }
 
     &__header {
         display: flex;
         justify-content: space-between;
         h4 {
+
 
         }
         .city {
@@ -43,6 +67,7 @@
 
         }
         .date {
+        
         
         }
 
@@ -61,18 +86,26 @@
 
 }
 
+//sobreNosotros
+
 .primary {
-    display: grid;
-    grid-template-columns: minmax(150px, 50%) 1fr;
+    display: flex;
+    flex-flow: wrap-reverse;
+    justify-content: center;
+
 
     
 
 
     &__title {
         font-weight: 500;
-        font-size: 1.5rem;
+        font-size: 1rem;
         font-family: 'Roboto', sans-serif;
         line-height: 2rem;
+        margin: 1rem;
+        background-color: $color-acento--800;
+        color: $color-txt--blanco;
+        
 
         
     }
@@ -81,33 +114,89 @@
         font-size: 1rem;
         font-family: 'Roboto', sans-serif;
         line-height: 1.5rem;
-        text-align: left;
-
+        text-align: center;
+        
 
     }
+
+    &__txt-txt{
+        margin: 2em;
+        text-align: center;
+    
+    }
     &__img{
+        width: 50%;
+
 
     }
 
 
 }
 
-article{
-    display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-
-    @include propiedadesArticle (70vh, 80vh)
-
-  }
-
-  form {
-
+//form 
+form {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
           flex-flow: column nowrap;
-  max-width: 450px;
-  margin: 0 auto;
+  margin: 2rem auto;
+  width: 400px;
+  height: 400px;
+  padding: 2em;
+  border: 1px solid #CCC;
+  border-radius: 1em;
+  background-color: rgb(245, 244, 244);
+
+  h2{
+      text-align: center;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+  }
+
+}
+
+button{
+    display: inline-block;
+    max-width: 150px;
+    border: 1px solid transparent;
+    padding: 1em 2em;
+    border-radius: .4em;
+    background-color: $color-acento--400;
+    color: $color-txt--blanco
+
+}
+
+.btn-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 4rem;
+
+    &--registrarse{
+        text-decoration: underline;
+    }
+}
+
+.form-login-input{
+    margin: 1rem;
+    margin-left: 0;
+    display: flex;
+    justify-content: space-between;
+
+
+}
+.form-link{
+    font-size: .9rem;
+    text-decoration: underline;
+    color: rgb(6, 6, 172);
+}
+
+.login{
+    background-image: url(../multimedia/formSP.jpg);
+}
+//logo
+.logo-marca{
+    max-width: 80px;
 }
 

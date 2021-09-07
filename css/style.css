@@ -22,7 +22,7 @@ img {
 .btn {
   display: inline-block;
   border: 1px solid transparent;
-  padding: 1em 1.6em;
+  padding: .4em .4em;
   border-radius: .4em;
 }
 
@@ -39,6 +39,19 @@ img {
   text-decoration: underline;
 }
 
+h1 {
+  text-align: center;
+  margin: 1rem;
+}
+
+.results {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1rem;
+  -ms-grid-columns: (minmax(200px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
 .card {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -47,12 +60,25 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  border: blueviolet solid 2px;
+  border: #86365e solid 2px;
 }
 
 .card__img {
   min-height: 200px;
-  background-color: green;
+  max-height: 224px;
+  overflow: hidden;
+}
+
+.card__img img {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.card__img:hover img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .card__header {
@@ -89,17 +115,26 @@ img {
 }
 
 .primary {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: minmax(150px, 50%) 1fr;
-      grid-template-columns: minmax(150px, 50%) 1fr;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-flow: wrap-reverse;
+          flex-flow: wrap-reverse;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .primary__title {
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-family: 'Roboto', sans-serif;
   line-height: 2rem;
+  margin: 1rem;
+  background-color: #6c2649;
+  color: #fff;
 }
 
 .primary__txt {
@@ -107,17 +142,16 @@ img {
   font-size: 1rem;
   font-family: 'Roboto', sans-serif;
   line-height: 1.5rem;
-  text-align: left;
+  text-align: center;
 }
 
-article {
-  display: -ms-grid;
-  display: grid;
-  grid-gap: 1rem;
-  -ms-grid-columns: (minmax(150px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  width: 70vh;
-  height: 80vh;
+.primary__txt-txt {
+  margin: 2em;
+  text-align: center;
+}
+
+.primary__img {
+  width: 50%;
 }
 
 form {
@@ -128,8 +162,72 @@ form {
   -webkit-box-direction: normal;
   -ms-flex-flow: column nowrap;
       flex-flow: column nowrap;
-  max-width: 450px;
-  margin: 0 auto;
+  margin: 2rem auto;
+  width: 400px;
+  height: 400px;
+  padding: 2em;
+  border: 1px solid #CCC;
+  border-radius: 1em;
+  background-color: #f5f4f4;
+}
+
+form h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+button {
+  display: inline-block;
+  max-width: 150px;
+  border: 1px solid transparent;
+  padding: 1em 2em;
+  border-radius: .4em;
+  background-color: #86365e;
+  color: #fff;
+}
+
+.btn-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+  margin: 4rem;
+}
+
+.btn-form--registrarse {
+  text-decoration: underline;
+}
+
+.form-login-input {
+  margin: 1rem;
+  margin-left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.form-link {
+  font-size: .9rem;
+  text-decoration: underline;
+  color: #0606ac;
+}
+
+.login {
+  background-image: url(../multimedia/formSP.jpg);
+}
+
+.logo-marca {
+  max-width: 80px;
 }
 
 html,
@@ -172,7 +270,8 @@ body {
 }
 
 header,
-footer {
+footer,
+main {
   padding: 1em 2.5%;
   background: #fcfcfc;
 }
@@ -270,7 +369,7 @@ footer .redes--icons a:hover {
 }
 
 .banner {
-  border: 2px solid green;
+  border: 2px solid #6c2649;
   min-height: 20vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -304,6 +403,18 @@ footer .redes--icons a:hover {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+}
+
+#inicio .hero__panel img {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+#inicio .hero__panel:hover img {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 #inicio .hero__img {

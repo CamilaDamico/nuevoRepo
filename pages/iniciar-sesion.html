@@ -12,7 +12,7 @@
 </head>
 <body>
     <header>
-        <a href="../index.html" class="logo marca">Logo</a>
+        <a href="../../index.html"class="logo-marca"> <img src="../multimedia/logo-SP.png" alt="logo Social Pets"></a>
         <nav>
             <ul class="menu">
                 <li class="menu__link"><a href="../index.html">Inicio</a></li>
@@ -27,21 +27,28 @@
         </div>
     </header>
 
-    <main>
-        <div>
-            <h2>Iniciar Sesión</h2>
-            <div>
+    <main class="login">
                 <form action="" method="post">
-                    <label for="email">Email</label>  
-                    <input type="email" id="email" name="email" required>
-                    <label for="password">Contraseña</label>
-                    <input type="password" id="password" name="password" required>
-                    <a href="#">Olvidé mi contraseña </a>
-                    <button type="submit">Ingresar</button>
-                    <a href="#">Registrarse</a>
+                    <h2>Iniciar Sesión</h2>
+                    <div class="form-login-input">
+                        <label for="email">Email</label>  
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-login-input">
+                        <label for="password">Contraseña</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    
+
+                    <a href="#" class="form-link">Olvidé mi contraseña </a>
+                    <div class="btn-form">
+                        <button type="submit">Ingresar</button>
+                        <a href="#" class="btn-form--registrarse">Registrarse</a>
+                    </div>
                 </form>
-            </div>
-        </div>
+            
+        
     </main>
 
 

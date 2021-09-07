@@ -7,6 +7,16 @@
         &__panel {
             position: relative;
             flex: 1;
+            img{
+                transform:scale(1);
+                transition: all 0.5s ease-out;
+            }
+    
+            &:hover{
+                img{
+                    transform:scale(1.05);
+                }
+            }
 
         }
 
