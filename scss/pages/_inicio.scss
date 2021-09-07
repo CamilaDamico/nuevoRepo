@@ -1,4 +1,24 @@
 #inicio {
+    #hamburgerButton{
+        display: none;
+    }
+
+    #hamburgerButton div {
+        width: 35px;
+        height: 5px;
+        background-color: $color-acento--400;
+        margin: 6px 0;
+    }
+
+    @media only screen and (max-width: 620px) {
+        .opa{
+            display: none;
+        }
+        #hamburgerButton{
+            display: block;
+        }
+    }
+
     .hero {
 
         display: flex;
