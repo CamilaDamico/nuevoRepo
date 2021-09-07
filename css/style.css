@@ -388,26 +388,6 @@ footer .redes--icons a:hover {
   padding: 2em;
 }
 
-#inicio #hamburgerButton {
-  display: none;
-}
-
-#inicio #hamburgerButton div {
-  width: 35px;
-  height: 5px;
-  background-color: #86365e;
-  margin: 6px 0;
-}
-
-@media only screen and (max-width: 620px) {
-  #inicio .opa {
-    display: none;
-  }
-  #inicio #hamburgerButton {
-    display: block;
-  }
-}
-
 #inicio .hero {
   display: -webkit-box;
   display: -ms-flexbox;
